@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #08070d;
+    color: #f5f3ff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: #7147ff;
+    opacity: 0.08;
+    filter: blur(150px);
+    top: -200px;
+    left: 30%;
+    pointer-events: none;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(8,7,13,0.75);
+    backdrop-filter: blur(15px);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #8b6cff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #aaa6b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+}
+
+.discord-btn,
+.primary-btn {
+    background: #7354ff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.discord-btn:hover,
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(115,84,255,0.3);
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    padding: 80px 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid rgba(139,108,255,0.3);
+    background: rgba(115,84,255,0.08);
+    border-radius: 100px;
+    color: #a996ff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.hero h1,
+.page-header h1 {
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: 1.05;
+    letter-spacing: -4px;
+    font-weight: 800;
+}
+
+.hero h1 span,
+.page-header h1 span {
+    color: #8b6cff;
+}
+
+.hero p,
+.page-header p {
+    max-width: 650px;
+    margin: 25px auto 35px;
+    color: #aaa6b8;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.secondary-btn {
+    color: #ddd9e8;
+    text-decoration: none;
+    border: 1px solid #292634;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    border-color: #6650bd;
+    background: #14111f;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.35;
+}
+
+.orb-one {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #7255ff;
+    right: -130px;
+    top: 15%;
+}
+
+.orb-two {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #7255ff;
+    left: -80px;
+    bottom: 10%;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 60px 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+}
+
+.stats strong {
+    font-size: 28px;
+}
+
+.stats span {
+    color: #777281;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 25px;
+    min-height: calc(100vh - 80px);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.page-header h1 {
+    font-size: clamp(45px, 7vw, 75px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    padding: 35px;
+    border: 1px solid #211e2b;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.02);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #493d7b;
+}
+
+.icon {
+    font-size: 25px;
+    color: #9078ff;
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+}
+
+.card p,
+.rule p {
+    color: #85818e;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.quote {
+    margin-top: 60px;
+    text-align: center;
+    padding: 45px;
+    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        rgba(115,84,255,0.12),
+        rgba(115,84,255,0.02)
+    );
+    border: 1px solid #29233e;
+}
+
+.quote p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.quote span {
+    display: block;
+    margin-top: 12px;
+    color: #777281;
+    font-size: 13px;
+}
+
+.rules {
+    max-width: 800px;
+    margin: auto;
+}
+
+.rule {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 20px;
+    padding: 30px 0;
+    border-bottom: 1px solid #201d28;
+}
+
+.number {
+    color: #8068ee;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.rule h2 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #575361;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .discord-btn {
+        display: none;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stats {
+        gap: 40px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .page {
+        padding: 70px 20px;
+    }
+
+    .rule {
+        grid-template-columns: 45px 1fr;
+    }
+    
+    }
+
+    .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+}
